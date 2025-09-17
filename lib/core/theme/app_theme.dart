@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template/core/resources/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:task_app/core/resources/app_colors.dart';
 
 final ThemeData primaryTheme = ThemeData(
   scaffoldBackgroundColor: Colors.white,

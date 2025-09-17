@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template/core/resources/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:task_app/core/resources/app_colors.dart';
 
 final TextStyle textStyle_11_400 =
     TextStyle(fontWeight: FontWeight.w400, fontSize: 11.sp, color: blackColor);

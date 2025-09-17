@@ -1,8 +1,8 @@
 
-import 'package:flutter_project_template/core/localization/language_cubit.dart';
-import 'package:flutter_project_template/core/resources/app_storage.dart';
-import 'package:flutter_project_template/core/theme/theme_cubit.dart';
 import 'package:get_it/get_it.dart';
+import 'package:task_app/core/localization/language_cubit.dart';
+import 'package:task_app/core/resources/app_storage.dart';
+import 'package:task_app/core/theme/theme_cubit.dart';
 final sl = GetIt.I;
 
 void setupServiceLocator() async {

@@ -182,7 +182,7 @@ flutter pub run flutter_native_splash:create
 1] Clone this repo:
 
 ```sh
-git clone https://github.com/your-username/flutter_project_template.git
+git clone https://github.com/your-username/task_app.git
 ```
 
 2] Open in VS Code or Android Studio.

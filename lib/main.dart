@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_project_template/core/di/service_locator.dart';
-import 'package:flutter_project_template/core/localization/language_cubit.dart';
-import 'package:flutter_project_template/core/resources/app_colors.dart';
-import 'package:flutter_project_template/core/resources/shared_app_strings.dart';
-import 'package:flutter_project_template/core/theme/theme_cubit.dart';
-import 'package:flutter_project_template/l10n/app_localizations.dart';
-import 'package:flutter_project_template/routes/app_router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:task_app/core/di/service_locator.dart';
+import 'package:task_app/core/localization/language_cubit.dart';
+import 'package:task_app/core/resources/app_colors.dart';
+import 'package:task_app/core/resources/shared_app_strings.dart';
+import 'package:task_app/core/theme/theme_cubit.dart';
+import 'package:task_app/l10n/app_localizations.dart';
+import 'package:task_app/routes/app_router.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

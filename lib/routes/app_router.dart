@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template/presentation/auth/view/splash_screen.dart';
-import 'package:flutter_project_template/presentation/dashboard/view/home.dart';
-import 'package:flutter_project_template/routes/app_routes.dart';
-import 'package:flutter_project_template/routes/error_screen.dart';
 import 'package:go_router/go_router.dart';
+import 'package:task_app/presentation/auth/view/splash_screen.dart';
+import 'package:task_app/presentation/dashboard/view/home.dart';
+import 'package:task_app/routes/app_routes.dart';
+import 'package:task_app/routes/error_screen.dart';
 
 CustomTransitionPage<T> slideTransitionPage<T>({
   required final Widget child,

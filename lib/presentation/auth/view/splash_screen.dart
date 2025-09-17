@@ -3,10 +3,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template/core/resources/app_colors.dart';
-import 'package:flutter_project_template/core/resources/app_images.dart';
-import 'package:flutter_project_template/routes/app_routes.dart';
 import 'package:go_router/go_router.dart';
+import 'package:task_app/core/resources/app_colors.dart';
+import 'package:task_app/core/resources/app_images.dart';
+import 'package:task_app/routes/app_routes.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
