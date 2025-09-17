@@ -2,10 +2,9 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_project_template/core/resources/app_colors.dart';
+import 'package:flutter_project_template/core/resources/app_images.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
-import '../resources/app_colors.dart';
-import '../resources/app_images.dart';
 
 // void showToast(final String message) {
 //   Fluttertoast.showToast(

@@ -1,3 +1,5 @@
+// ignore_for_file: flutter_style_todos
+
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class SecureStorage {

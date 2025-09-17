@@ -2,10 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../di/service_locator.dart';
-import '../resources/app_keys.dart';
-import '../resources/app_storage.dart';
-import '../utils/core_utils.dart';
+import 'package:flutter_project_template/core/di/service_locator.dart';
+import 'package:flutter_project_template/core/resources/app_keys.dart';
+import 'package:flutter_project_template/core/resources/app_storage.dart';
+import 'package:flutter_project_template/core/utils/core_utils.dart';
 
 class LanguageCubit extends Cubit<Locale> {
   LanguageCubit() : super(Locale('en'));

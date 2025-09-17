@@ -21,10 +21,9 @@ class LoadingState extends PageState {
 }
 
 class LoadedState<T> extends PageState {
+  LoadedState({required this.data, this.message});
   final String? message;
   final T? data;
-
-  LoadedState({this.message, required this.data});
 
   @override
   List<T?> get props => [data];

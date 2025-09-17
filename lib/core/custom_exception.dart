@@ -1,7 +1,6 @@
 import 'dart:convert';
 
-import 'utils/core_utils.dart';
-
+import 'package:flutter_project_template/core/utils/core_utils.dart';
 
 class CustomException implements Exception {
   CustomException([this._message, this._prefix]);
@@ -35,18 +34,15 @@ class FetchDataException extends CustomException {
 }
 
 class BadRequestException extends CustomException {
-  BadRequestException(final String message)
-      : super(message, 'Invalid Request: ');
+  BadRequestException(final String message) : super(message, 'Invalid Request: ');
 }
 
 class UnauthorisedException extends CustomException {
-  UnauthorisedException(final String message)
-      : super(_extractMessage(message), 'Unauthorised: ');
+  UnauthorisedException(final String message) : super(_extractMessage(message), 'Unauthorised: ');
 }
 
 class InvalidInputException extends CustomException {
-  InvalidInputException(final String message)
-      : super(message, 'Invalid Input: ');
+  InvalidInputException(final String message) : super(message, 'Invalid Input: ');
 }
 
 class NoInternetException extends CustomException {
@@ -54,8 +50,7 @@ class NoInternetException extends CustomException {
 }
 
 class InternalServerException extends CustomException {
-  InternalServerException(final String message)
-      : super(message, 'Internal Server Error: ');
+  InternalServerException(final String message) : super(message, 'Internal Server Error: ');
 }
 
 class ApiErrorException extends CustomException {

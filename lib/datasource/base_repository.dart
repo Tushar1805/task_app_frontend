@@ -1,22 +1,22 @@
 import 'dart:io';
 
-import '../core/custom_exception.dart';
-import '../core/utils/core_utils.dart';
-import 'network/api.dart';
-import 'network/api_call_type.dart';
-import 'network/api_response_type.dart';
-
+import 'package:flutter_project_template/core/custom_exception.dart';
+import 'package:flutter_project_template/core/utils/core_utils.dart';
+import 'package:flutter_project_template/datasource/network/api.dart';
+import 'package:flutter_project_template/datasource/network/api_call_type.dart';
+import 'package:flutter_project_template/datasource/network/api_response_type.dart';
 
 abstract class BaseRepository {
   final Api _api = Api();
 
-  Future<dynamic> fetchData(
-      {required final ApiCallType apiCallType,
-      required final String apiUrl,
-      final dynamic requestModel,
-      final ApiResponseType? apiResponseType,
-      final Map<String, File?>? filesWithFieldNames,
-      final String? accessToken}) async {
+  Future<dynamic> fetchData({
+    required final ApiCallType apiCallType,
+    required final String apiUrl,
+    final dynamic requestModel,
+    final ApiResponseType? apiResponseType,
+    final Map<String, File?>? filesWithFieldNames,
+    final String? accessToken,
+  }) async {
     final internetConnected = await isInternetConnected();
 
     if (!internetConnected) {
@@ -24,16 +24,23 @@ abstract class BaseRepository {
     }
 
     return _fetchApiData(
-        apiCallType, apiUrl, requestModel, apiResponseType, filesWithFieldNames, accessToken);
+      apiCallType,
+      apiUrl,
+      requestModel,
+      apiResponseType,
+      filesWithFieldNames,
+      accessToken,
+    );
   }
 
   Future<dynamic> _fetchApiData(
-      final ApiCallType apiCallType,
-      final String apiUrl,
-      final dynamic requestModel,
-      final ApiResponseType? apiResponseType,
-      final Map<String, File?>? filesWithFieldNames,
-      final String? accessToken) async {
+    final ApiCallType apiCallType,
+    final String apiUrl,
+    final dynamic requestModel,
+    final ApiResponseType? apiResponseType,
+    final Map<String, File?>? filesWithFieldNames,
+    final String? accessToken,
+  ) async {
     final apiResponse = apiCallType == ApiCallType.get
         ? await _api.get(
             apiUrl,

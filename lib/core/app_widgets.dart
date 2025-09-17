@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'resources/shared_app_strings.dart';
+import 'package:flutter_project_template/core/resources/shared_app_strings.dart';
 
 class Loading extends StatelessWidget {
   const Loading({super.key, this.loadingMessage});

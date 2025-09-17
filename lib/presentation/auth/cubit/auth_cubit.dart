@@ -1,17 +1,14 @@
-
-
-import '../../../core/di/service_locator.dart';
-import '../../../core/resources/app_keys.dart';
-import '../../../core/resources/app_storage.dart';
-import '../../../datasource/basecubit/base_cubit.dart';
-import '../repo/auth_repo.dart';
-import '../states/auth_states.dart';
+import 'package:flutter_project_template/core/di/service_locator.dart';
+import 'package:flutter_project_template/core/resources/app_keys.dart';
+import 'package:flutter_project_template/core/resources/app_storage.dart';
+import 'package:flutter_project_template/datasource/basecubit/base_cubit.dart';
+import 'package:flutter_project_template/presentation/auth/repo/auth_repo.dart';
+import 'package:flutter_project_template/presentation/auth/states/auth_states.dart';
 
 class AuthCubit extends BaseCubit {
-  final AuthRepository _authRepository;
   AuthCubit(this._authRepository) : super();
+  final AuthRepository _authRepository;
   final storage = sl<SecureStorage>();
-
 
   Future<void> getUserDetails() async {
     try {

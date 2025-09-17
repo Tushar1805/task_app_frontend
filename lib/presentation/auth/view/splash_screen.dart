@@ -1,12 +1,12 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'dart:async';
-import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
-import '../../../core/resources/app_colors.dart';
-import '../../../core/resources/app_images.dart';
-import '../../../routes/app_routes.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_project_template/core/resources/app_colors.dart';
+import 'package:flutter_project_template/core/resources/app_images.dart';
+import 'package:flutter_project_template/routes/app_routes.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(final BuildContext context) {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(

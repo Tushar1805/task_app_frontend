@@ -1,52 +1,47 @@
 import 'package:flutter/material.dart';
-import '../presentation/auth/view/splash_screen.dart';
-import '../presentation/dashboard/view/home.dart';
-import 'app_routes.dart';
-import 'error_screen.dart';
+import 'package:flutter_project_template/presentation/auth/view/splash_screen.dart';
+import 'package:flutter_project_template/presentation/dashboard/view/home.dart';
+import 'package:flutter_project_template/routes/app_routes.dart';
+import 'package:flutter_project_template/routes/error_screen.dart';
 import 'package:go_router/go_router.dart';
 
 CustomTransitionPage<T> slideTransitionPage<T>({
-  required Widget child,
-  required LocalKey key,
-}) {
-  return CustomTransitionPage<T>(
-    key: key,
-    child: child,
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      final offsetAnimation = Tween<Offset>(
-        begin: const Offset(1.0, 0.0),
-        end: Offset.zero,
-      ).chain(CurveTween(curve: Curves.easeInOut)).animate(animation);
+  required final Widget child,
+  required final LocalKey key,
+}) =>
+    CustomTransitionPage<T>(
+      key: key,
+      child: child,
+      transitionsBuilder: (final context, final animation, final secondaryAnimation, final child) {
+        final offsetAnimation = Tween<Offset>(
+          begin: const Offset(1.0, 0.0),
+          end: Offset.zero,
+        ).chain(CurveTween(curve: Curves.easeInOut)).animate(animation);
 
-      return SlideTransition(position: offsetAnimation, child: child);
-    },
-  );
-}
+        return SlideTransition(position: offsetAnimation, child: child);
+      },
+    );
 
 final GoRouter router = GoRouter(
   initialLocation: splashScreen,
-  errorBuilder: (context, state) => const ErrorScreen(),
+  errorBuilder: (final context, final state) => const ErrorScreen(),
   routes: [
     GoRoute(
       name: splashScreen,
       path: splashScreen,
-      pageBuilder: (final context, final state) {
-        return slideTransitionPage(
-          key: state.pageKey,
-          child: SplashScreen(),
-        );
-      },
+      pageBuilder: (final context, final state) => slideTransitionPage(
+        key: state.pageKey,
+        child: SplashScreen(),
+      ),
     ),
 
     GoRoute(
       name: homeScreen,
       path: homeScreen,
-      pageBuilder: (final context, final state) {
-        return slideTransitionPage(
-          key: state.pageKey,
-          child: HomeScreen(),
-        );
-      },
+      pageBuilder: (final context, final state) => slideTransitionPage(
+        key: state.pageKey,
+        child: HomeScreen(),
+      ),
     ),
 
     // GoRoute(
