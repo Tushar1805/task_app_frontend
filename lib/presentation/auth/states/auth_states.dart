@@ -1,4 +1,4 @@
-import 'package:flutter_project_template/datasource/states/data_state.dart';
+import 'package:task_app/datasource/states/data_state.dart';
 
 class AuthLoadingState extends LoadingState {
   AuthLoadingState(super.loadingMessage);

@@ -1,9 +1,9 @@
-import 'package:flutter_project_template/core/di/service_locator.dart';
-import 'package:flutter_project_template/core/resources/app_keys.dart';
-import 'package:flutter_project_template/core/resources/app_storage.dart';
-import 'package:flutter_project_template/datasource/basecubit/base_cubit.dart';
-import 'package:flutter_project_template/presentation/auth/repo/auth_repo.dart';
-import 'package:flutter_project_template/presentation/auth/states/auth_states.dart';
+import 'package:task_app/core/di/service_locator.dart';
+import 'package:task_app/core/resources/app_keys.dart';
+import 'package:task_app/core/resources/app_storage.dart';
+import 'package:task_app/datasource/basecubit/base_cubit.dart';
+import 'package:task_app/presentation/auth/repo/auth_repo.dart';
+import 'package:task_app/presentation/auth/states/auth_states.dart';
 
 class AuthCubit extends BaseCubit {
   AuthCubit(this._authRepository) : super();

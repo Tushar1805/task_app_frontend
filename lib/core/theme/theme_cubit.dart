@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_project_template/core/di/service_locator.dart';
-import 'package:flutter_project_template/core/resources/app_keys.dart';
-import 'package:flutter_project_template/core/resources/app_storage.dart';
-import 'package:flutter_project_template/core/theme/app_theme.dart';
-import 'package:flutter_project_template/core/utils/core_utils.dart';
+import 'package:task_app/core/di/service_locator.dart';
+import 'package:task_app/core/resources/app_keys.dart';
+import 'package:task_app/core/resources/app_storage.dart';
+import 'package:task_app/core/theme/app_theme.dart';
+import 'package:task_app/core/utils/core_utils.dart';
 
 class ThemeCubit extends Cubit<ThemeData> {
   ThemeCubit() : super(primaryTheme);

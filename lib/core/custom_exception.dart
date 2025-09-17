@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter_project_template/core/utils/core_utils.dart';
+import 'package:task_app/core/utils/core_utils.dart';
 
 class CustomException implements Exception {
   CustomException([this._message, this._prefix]);

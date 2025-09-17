@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:flutter_project_template/core/custom_exception.dart';
-import 'package:flutter_project_template/core/utils/core_utils.dart';
-import 'package:flutter_project_template/datasource/network/api.dart';
-import 'package:flutter_project_template/datasource/network/api_call_type.dart';
-import 'package:flutter_project_template/datasource/network/api_response_type.dart';
+import 'package:task_app/core/custom_exception.dart';
+import 'package:task_app/core/utils/core_utils.dart';
+import 'package:task_app/datasource/network/api.dart';
+import 'package:task_app/datasource/network/api_call_type.dart';
+import 'package:task_app/datasource/network/api_response_type.dart';
 
 abstract class BaseRepository {
   final Api _api = Api();
