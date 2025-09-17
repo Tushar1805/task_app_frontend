@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:task_app/core/resources/app_regex.dart';
 
 extension HexColor on Color {
   /// String is in the format "aabbcc" or
@@ -16,8 +17,7 @@ extension HexColor on Color {
 
   /// Prefixes a hash sign if [leadingHashSign]
   /// is set to `true` (default is `true`).
-  String toHex({final bool leadingHashSign = true}) =>
-      '${leadingHashSign ? '#' : ''}'
+  String toHex({final bool leadingHashSign = true}) => '${leadingHashSign ? '#' : ''}'
       '${alpha.toRadixString(16).padLeft(2, '0')}'
       '${red.toRadixString(16).padLeft(2, '0')}'
       '${green.toRadixString(16).padLeft(2, '0')}'
@@ -39,8 +39,7 @@ extension HexColor on Color {
     assert(amount >= 0 && amount <= 1, 'invalid amount');
 
     final hsl = HSLColor.fromColor(color);
-    final hslLight =
-        hsl.withLightness((hsl.lightness + amount).clamp(0.0, 1.0));
+    final hslLight = hsl.withLightness((hsl.lightness + amount).clamp(0.0, 1.0));
 
     return hslLight.toColor();
   }
@@ -63,4 +62,9 @@ extension TestStringPresence on String {
 
 extension ObjectExt<T> on T {
   R let<R>(final R Function(T that) op) => op(this);
+}
+
+extension StringExtension on String {
+  bool isValidEmail() => emailRegex.hasMatch(this);
+  bool isValidPassword() => passwordRegex.hasMatch(this);
 }

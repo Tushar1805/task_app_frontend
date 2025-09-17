@@ -2,19 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task_app/core/resources/app_colors.dart';
 
+OutlineInputBorder _border(final Color color) => OutlineInputBorder(
+      borderSide: BorderSide(color: color, width: 3),
+      borderRadius: BorderRadius.circular(10),
+    );
+
 final ThemeData primaryTheme = ThemeData(
   scaffoldBackgroundColor: Colors.white,
   // unselectedWidgetColor: Colors.white,
   appBarTheme: const AppBarTheme(
     titleTextStyle: TextStyle(color: Colors.white),
-    backgroundColor: primaryColor,
+    backgroundColor: AppColors.primaryColor,
   ),
   cardTheme: const CardThemeData(color: Colors.white),
-  bottomNavigationBarTheme:const  BottomNavigationBarThemeData(
+  inputDecorationTheme: InputDecorationThemeData(
+    contentPadding: const EdgeInsets.all(27),
+    enabledBorder: _border(AppColors.borderColor),
+    focusedBorder: _border(AppColors.blackColor),
+    focusedErrorBorder: _border(Colors.red),
+    errorBorder: _border(Colors.red),
+  ),
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     backgroundColor: Colors.white,
   ),
   textSelectionTheme: const TextSelectionThemeData(
-    cursorColor: primaryColor,
+    cursorColor: AppColors.primaryColor,
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      backgroundColor: AppColors.blackColor,
+      minimumSize: const Size(double.infinity, 60),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+    ),
   ),
   buttonTheme: ButtonThemeData(
     textTheme: ButtonTextTheme.primary,
@@ -25,11 +46,11 @@ final ThemeData primaryTheme = ThemeData(
     ),
   ),
   colorScheme: ColorScheme(
-    tertiaryContainer: primaryColor,
+    tertiaryContainer: AppColors.primaryColor,
     brightness: Brightness.light,
-    primary: primaryColor,
+    primary: AppColors.primaryColor,
     onPrimary: Colors.white,
-    secondary: secondaryColor,
+    secondary: AppColors.secondaryColor,
     onSecondary: Colors.white,
     error: Colors.red,
     onError: Colors.red,
@@ -103,8 +124,24 @@ final ThemeData darkTheme = ThemeData(
     //color: cardColor,
     color: Colors.white,
   ),
+  inputDecorationTheme: InputDecorationThemeData(
+    contentPadding: const EdgeInsets.all(27),
+    enabledBorder: _border(AppColors.borderColor),
+    focusedBorder: _border(AppColors.blackColor),
+    focusedErrorBorder: _border(Colors.red),
+    errorBorder: _border(Colors.red),
+  ),
   textSelectionTheme: const TextSelectionThemeData(
     cursorColor: Colors.white,
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      backgroundColor: AppColors.primaryColor,
+      minimumSize: const Size(double.infinity, 60),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+    ),
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(backgroundColor: Colors.black),
   buttonTheme: ButtonThemeData(

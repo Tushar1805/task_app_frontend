@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:task_app/presentation/auth/view/login_screen.dart';
+import 'package:task_app/presentation/auth/view/sign_up_screen.dart';
 import 'package:task_app/presentation/auth/view/splash_screen.dart';
 import 'package:task_app/presentation/dashboard/view/home.dart';
 import 'package:task_app/routes/app_routes.dart';
@@ -41,6 +43,22 @@ final GoRouter router = GoRouter(
       pageBuilder: (final context, final state) => slideTransitionPage(
         key: state.pageKey,
         child: HomeScreen(),
+      ),
+    ),
+    GoRoute(
+      name: signUpScreen,
+      path: signUpScreen,
+      pageBuilder: (final context, final state) => slideTransitionPage(
+        key: state.pageKey,
+        child: SignUpScreen(),
+      ),
+    ),
+    GoRoute(
+      name: loginScreen,
+      path: loginScreen,
+      pageBuilder: (final context, final state) => slideTransitionPage(
+        key: state.pageKey,
+        child: LoginScreen(),
       ),
     ),
 

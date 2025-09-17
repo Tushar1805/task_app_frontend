@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 3), () {
-      context.go(homeScreen);
+      context.go(signUpScreen);
     });
   }
 
@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     return Scaffold(
       body: Container(
-        color: primaryColor,
+        color: AppColors.primaryColor,
         child: Center(
           child: SizedBox(
             width: size.width * 0.6,
